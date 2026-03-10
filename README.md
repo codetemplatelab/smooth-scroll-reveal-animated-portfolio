@@ -1,41 +1,56 @@
-# Smooth Scroll Reveal Animated Portfolio
+# Animated Developer Portfolio Template
 
-A modern, minimal, developer-focused portfolio template built with:
+A modern, minimal, developer-focused portfolio template built with React, Vite, Tailwind CSS, Framer Motion, and lucide-react icons.
 
-- React + Vite
-- Tailwind CSS
+## Stack
+
+- React 19
+- Vite 7
+- Tailwind CSS (via `@tailwindcss/vite`)
 - Framer Motion
-- lucide-react icons
+- lucide-react
 
-This template includes animated scroll reveals, staggered card animations, hover effects, responsive layouts, and a clean data-driven content system.
+## Features
+
+- Sticky navbar with smooth-scroll anchor links
+- Hover underline animation on navbar items
+- Hero section with text reveal animation
+- Scroll-reveal animation for each section
+- Fade-in + vertical movement transitions
+- Staggered card animation (skills, projects, experience timeline)
+- Hover lift/scale effects for interactive cards and buttons
+- Animated vertical timeline line in Experience
+- Animated horizontal sliding Testimonials track
+- Contact form with animated focus states
+- Fully responsive layout for desktop, tablet, and mobile
 
 ## Sections Included
 
-- Sticky Navbar with smooth scroll links
+- Navbar
 - Hero (Home)
 - About
-- Experience (timeline with animated vertical line)
+- Experience
 - Skills
 - Projects
-- Testimonials (horizontal sliding cards)
-- Contact (animated focus effects)
+- Testimonials
+- Contact
 - Footer
 
 ## Installation
 
 Prerequisites:
 
-- Node.js 18+ (recommended Node.js 20+)
+- Node.js 18+ (Node.js 20+ recommended)
 - npm
 
-Run:
+Install and run:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Build for production:
+Build production bundle:
 
 ```bash
 npm run build
@@ -44,46 +59,88 @@ npm run preview
 
 ## Customization
 
-All editable portfolio content is stored in `src/data`:
+All editable content is centralized in:
 
 - `src/data/profile.js`
-  - name, title, intro, availability, social links, biography, testimonials
 - `src/data/projects.js`
-  - project cards (image, title, description, tech stack, demo link, GitHub link)
 - `src/data/skills.js`
-  - skills list (name, level, icon key, description)
 - `src/data/experience.js`
-  - timeline items (role, company, period, summary, highlights)
 
-To customize your portfolio:
+### 1) `src/data/profile.js`
 
-1. Replace content values in these files with your details.
-2. Update links and contact information.
-3. Replace placeholder project/demo URLs.
-4. Swap Picsum image URLs with your own hosted images if needed.
-5. Update `index.html` meta tags (title, description, social tags, and favicon) for SEO and branding.
+Update:
 
-## Animation System
+- brand name
+- developer name and title
+- hero intro text
+- availability, location, and contact email
+- profile/about images
+- about paragraphs
+- contact blurb
+- hero stats
+- social links
+- testimonials
 
-Implemented with Framer Motion:
+### 2) `src/data/projects.js`
 
-- Section scroll reveal on viewport entry
-- Staggered animation for skills, projects, and timeline cards
-- Fade-in + vertical movement transitions
-- Horizontal sliding testimonials track
-- Hover scale/lift effects on cards and CTA elements
+Each project card supports:
+
+- `image` (currently Picsum URLs)
+- `title`
+- `description`
+- `techStack` (array)
+- `demoLink`
+- `githubLink`
+
+### 3) `src/data/skills.js`
+
+Each skill card supports:
+
+- `name`
+- `icon` (lucide key used in `App.jsx` icon map)
+- `level`
+- `description`
+
+### 4) `src/data/experience.js`
+
+Each timeline entry supports:
+
+- `company`
+- `role`
+- `location`
+- `period`
+- `summary`
+- `highlights` (array)
 
 ## Folder Structure
 
 ```text
 smooth-scroll-reveal-animated-portfolio/
   public/
+    portfolio-icon.svg
   src/
+    components/
+      AnimatedSection.jsx
+      Container.jsx
+      GradientButton.jsx
+      motion.js
+      SectionHeading.jsx
     data/
       experience.js
       profile.js
       projects.js
       skills.js
+    sections/
+      AboutSection.jsx
+      ContactSection.jsx
+      ExperienceSection.jsx
+      FooterSection.jsx
+      HeroSection.jsx
+      Navbar.jsx
+      ProjectsSection.jsx
+      SkillsSection.jsx
+      TechStackSection.jsx
+      TestimonialsSection.jsx
     App.jsx
     index.css
     main.jsx
@@ -92,8 +149,10 @@ smooth-scroll-reveal-animated-portfolio/
   vite.config.js
 ```
 
-## Tech Notes
+## Design and Animation Notes
 
-- Tailwind CSS is configured through `@tailwindcss/vite` in `vite.config.js`.
-- Global styling and theme variables live in `src/index.css`.
-- Main layout and section animations live in `src/App.jsx`.
+- Global smooth scrolling is set in `src/index.css`.
+- Section entry animation uses Framer Motion `whileInView` patterns in `src/App.jsx`.
+- Cards use staggered containers and reveal variants for progressive motion.
+- Contact inputs use animated focus scale and ring shadow transitions.
+- Projects use Picsum placeholders; replace with your own hosted assets anytime.

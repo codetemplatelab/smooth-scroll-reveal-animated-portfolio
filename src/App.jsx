@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import {
   Accessibility,
   ArrowRight,
@@ -118,14 +118,14 @@ function SectionHeading({ title, description }) {
 function RevealSection({ id, children, className = '' }) {
   return (
     <section id={id} className={`scroll-mt-24 py-20 md:py-24 ${className}`}>
-      <motion.div
+      <Motion.div
         variants={sectionReveal}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.22 }}
       >
         {children}
-      </motion.div>
+      </Motion.div>
     </section>
   )
 }
@@ -182,24 +182,24 @@ function App() {
       <main className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <section id="home" className="scroll-mt-24 py-16 md:py-24">
           <div className="grid items-center gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
-            <motion.div
+            <Motion.div
               variants={stagger}
               initial="hidden"
               animate="show"
               className="space-y-7"
             >
-              <motion.p
+              <Motion.p
                 variants={cardReveal}
                 className="font-mono-title inline-flex rounded-full border border-cyan-200 bg-cyan-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700"
               >
                 {profile.availability}
-              </motion.p>
+              </Motion.p>
 
               <div className="space-y-4">
                 <h1 className="text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
                   {profile.name.split(' ').map((word, index) => (
                     <span className="mr-3 inline-block overflow-hidden" key={word}>
-                      <motion.span
+                      <Motion.span
                         className="inline-block"
                         initial={{ y: '110%', opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
@@ -210,25 +210,25 @@ function App() {
                         }}
                       >
                         {word}
-                      </motion.span>
+                      </Motion.span>
                     </span>
                   ))}
                 </h1>
-                <motion.p
+                <Motion.p
                   variants={cardReveal}
                   className="font-mono-title text-lg text-cyan-700 md:text-xl"
                 >
                   {profile.title}
-                </motion.p>
-                <motion.p
+                </Motion.p>
+                <Motion.p
                   variants={cardReveal}
                   className="max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg"
                 >
                   {profile.intro}
-                </motion.p>
+                </Motion.p>
               </div>
 
-              <motion.div
+              <Motion.div
                 variants={cardReveal}
                 className="flex flex-wrap items-center gap-4"
               >
@@ -246,28 +246,28 @@ function App() {
                   Contact Me
                   <Mail size={16} />
                 </a>
-              </motion.div>
+              </Motion.div>
 
-              <motion.div
+              <Motion.div
                 variants={stagger}
                 initial="hidden"
                 animate="show"
                 className="grid gap-4 sm:grid-cols-3"
               >
                 {profile.heroStats.map((stat) => (
-                  <motion.div
+                  <Motion.div
                     key={stat.label}
                     variants={cardReveal}
                     className="rounded-2xl border border-slate-200/90 bg-white/75 p-4 backdrop-blur-md"
                   >
                     <p className="text-2xl font-semibold text-slate-900">{stat.value}</p>
                     <p className="text-sm text-slate-600">{stat.label}</p>
-                  </motion.div>
+                  </Motion.div>
                 ))}
-              </motion.div>
-            </motion.div>
+              </Motion.div>
+            </Motion.div>
 
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: easing, delay: 0.35 }}
@@ -282,7 +282,7 @@ function App() {
                   className="relative h-[440px] w-full rounded-2xl object-cover object-center"
                 />
               </div>
-            </motion.div>
+            </Motion.div>
           </div>
         </section>
 
@@ -292,7 +292,7 @@ function App() {
             description="I enjoy shipping polished interfaces where animation improves clarity, not noise."
           />
           <div className="grid items-center gap-8 md:grid-cols-[0.9fr_1.1fr]">
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, x: -36 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.28 }}
@@ -304,8 +304,8 @@ function App() {
                 alt="Workspace setup"
                 className="h-[340px] w-full rounded-3xl object-cover"
               />
-            </motion.div>
-            <motion.div
+            </Motion.div>
+            <Motion.div
               initial={{ opacity: 0, x: 36 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.28 }}
@@ -330,7 +330,7 @@ function App() {
                   {profile.experienceYears}
                 </span>
               </div>
-            </motion.div>
+            </Motion.div>
           </div>
         </RevealSection>
 
@@ -340,14 +340,14 @@ function App() {
             description="A timeline of roles focused on product engineering, accessibility, and smooth interaction design."
           />
           <div className="relative">
-            <motion.div
+            <Motion.div
               className="absolute left-3 top-2 hidden h-[calc(100%-20px)] w-[2px] origin-top bg-gradient-to-b from-cyan-400 via-slate-300 to-transparent md:block"
               initial={{ scaleY: 0 }}
               whileInView={{ scaleY: 1 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 1.2, ease: easing }}
             />
-            <motion.div
+            <Motion.div
               variants={stagger}
               initial="hidden"
               whileInView="show"
@@ -355,7 +355,7 @@ function App() {
               className="space-y-6"
             >
               {experience.map((item, index) => (
-                <motion.article
+                <Motion.article
                   key={`${item.company}-${item.role}`}
                   custom={index}
                   variants={timelineReveal}
@@ -382,9 +382,9 @@ function App() {
                       </li>
                     ))}
                   </ul>
-                </motion.article>
+                </Motion.article>
               ))}
-            </motion.div>
+            </Motion.div>
           </div>
         </RevealSection>
 
@@ -393,7 +393,7 @@ function App() {
             title="Skills"
             description="Core tools and technologies I use to ship fast, maintainable, and accessible frontend products."
           />
-          <motion.div
+          <Motion.div
             variants={stagger}
             initial="hidden"
             whileInView="show"
@@ -403,7 +403,7 @@ function App() {
             {skills.map((skill) => {
               const SkillIcon = iconMap[skill.icon] ?? Code2
               return (
-                <motion.article
+                <Motion.article
                   key={skill.name}
                   variants={cardReveal}
                   whileHover={{ scale: 1.03, y: -5 }}
@@ -422,10 +422,10 @@ function App() {
                   <p className="mt-2 text-sm leading-relaxed text-slate-600">
                     {skill.description}
                   </p>
-                </motion.article>
+                </Motion.article>
               )
             })}
-          </motion.div>
+          </Motion.div>
         </RevealSection>
 
         <RevealSection id="projects">
@@ -433,7 +433,7 @@ function App() {
             title="Projects"
             description="Selected work with clean UI systems, performant state architecture, and reusable frontend patterns."
           />
-          <motion.div
+          <Motion.div
             variants={stagger}
             initial="hidden"
             whileInView="show"
@@ -441,7 +441,7 @@ function App() {
             className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
           >
             {projects.map((project) => (
-              <motion.article
+              <Motion.article
                 key={project.title}
                 variants={cardReveal}
                 whileHover={{ y: -7, scale: 1.01 }}
@@ -494,9 +494,9 @@ function App() {
                     </a>
                   </div>
                 </div>
-              </motion.article>
+              </Motion.article>
             ))}
-          </motion.div>
+          </Motion.div>
         </RevealSection>
 
         <RevealSection id="testimonials">
@@ -505,7 +505,7 @@ function App() {
             description="Feedback from product teams and founders I worked with on frontend architecture and design implementation."
           />
           <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white/80 p-4 md:p-6">
-            <motion.div
+            <Motion.div
               className="flex w-max gap-4"
               animate={{ x: ['0%', '-50%'] }}
               transition={{ duration: 26, ease: 'linear', repeat: Infinity }}
@@ -526,7 +526,7 @@ function App() {
                   </div>
                 </article>
               ))}
-            </motion.div>
+            </Motion.div>
           </div>
         </RevealSection>
 
@@ -536,7 +536,7 @@ function App() {
             description="Let us build something thoughtful. Share your project goals and timeline and I will get back within 24 hours."
           />
           <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-            <motion.div
+            <Motion.div
               variants={cardReveal}
               initial="hidden"
               whileInView="show"
@@ -579,9 +579,9 @@ function App() {
                   )
                 })}
               </div>
-            </motion.div>
+            </Motion.div>
 
-            <motion.form
+            <Motion.form
               onSubmit={(event) => event.preventDefault()}
               variants={cardReveal}
               initial="hidden"
@@ -630,7 +630,7 @@ function App() {
                 Send Message
                 <ArrowRight size={16} />
               </button>
-            </motion.form>
+            </Motion.form>
           </div>
         </RevealSection>
       </main>
@@ -654,3 +654,4 @@ function App() {
 }
 
 export default App
+

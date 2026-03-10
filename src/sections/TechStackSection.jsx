@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import { Atom, Boxes, Cloud, Code2, GitBranch, Layers3, Server } from 'lucide-react'
 import AnimatedSection from '../components/AnimatedSection'
 import Container from '../components/Container'
@@ -24,7 +24,7 @@ function TechStackSection({ profile }) {
           description="A focused stack for shipping scalable interfaces, backend integrations, and production deployments."
         />
 
-        <motion.div
+        <Motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
@@ -34,7 +34,7 @@ function TechStackSection({ profile }) {
           {profile.techStack.map((item) => {
             const Icon = iconMap[item.icon] ?? Code2
             return (
-              <motion.article
+              <Motion.article
                 key={item.name}
                 variants={fadeUp}
                 whileHover={{ scale: 1.02, y: -4 }}
@@ -45,13 +45,14 @@ function TechStackSection({ profile }) {
                   <Icon size={20} />
                 </span>
                 <span className="text-sm font-semibold text-slate-800">{item.name}</span>
-              </motion.article>
+              </Motion.article>
             )
           })}
-        </motion.div>
+        </Motion.div>
       </Container>
     </AnimatedSection>
   )
 }
 
 export default TechStackSection
+

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react'
 import AnimatedSection from '../components/AnimatedSection'
 import Container from '../components/Container'
@@ -16,27 +16,27 @@ function ContactSection({ profile }) {
         />
 
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-          <motion.div
+          <Motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
             className="glow-card space-y-4 p-6"
           >
-            <motion.p variants={fadeUp} className="text-sm leading-relaxed text-slate-600">
+            <Motion.p variants={fadeUp} className="text-sm leading-relaxed text-slate-600">
               I partner with teams that care about design quality, strong frontend
               engineering, and measurable product outcomes.
-            </motion.p>
-            <motion.a
+            </Motion.p>
+            <Motion.a
               variants={fadeUp}
               href={`mailto:${profile.email}`}
               className="inline-flex items-center gap-2 rounded-xl bg-[linear-gradient(120deg,#06b6d4,#6366f1)] px-4 py-2.5 text-sm font-semibold text-white shadow-[0_10px_25px_-15px_rgba(99,102,241,0.7)] transition hover:shadow-[0_16px_30px_-14px_rgba(6,182,212,0.75)]"
             >
               <Mail size={16} />
               {profile.email}
-            </motion.a>
+            </Motion.a>
 
-            <motion.div variants={fadeUp} className="space-y-2 text-sm text-slate-600">
+            <Motion.div variants={fadeUp} className="space-y-2 text-sm text-slate-600">
               <a
                 href={profile.github}
                 target="_blank"
@@ -55,10 +55,10 @@ function ContactSection({ profile }) {
                 <Linkedin size={16} />
                 LinkedIn
               </a>
-            </motion.div>
-          </motion.div>
+            </Motion.div>
+          </Motion.div>
 
-          <motion.form
+          <Motion.form
             onSubmit={(event) => event.preventDefault()}
             variants={fadeUp}
             initial="hidden"
@@ -110,7 +110,7 @@ function ContactSection({ profile }) {
               Send Message
               <ArrowRight size={16} />
             </button>
-          </motion.form>
+          </Motion.form>
         </div>
       </Container>
     </AnimatedSection>
@@ -118,3 +118,4 @@ function ContactSection({ profile }) {
 }
 
 export default ContactSection
+

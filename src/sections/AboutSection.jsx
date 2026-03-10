@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import { BriefcaseBusiness, Code2 } from 'lucide-react'
 import AnimatedSection from '../components/AnimatedSection'
 import Container from '../components/Container'
@@ -15,7 +15,7 @@ function AboutSection({ profile }) {
           description="A concise overview of background, technical focus, and career progression."
         />
         <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, x: -28 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.22 }}
@@ -27,9 +27,9 @@ function AboutSection({ profile }) {
               alt="Developer workspace"
               className="h-[360px] w-full rounded-[1.3rem] object-cover"
             />
-          </motion.div>
+          </Motion.div>
 
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, x: 28 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.22 }}
@@ -61,7 +61,7 @@ function AboutSection({ profile }) {
                 {profile.careerSummary}
               </p>
             </div>
-          </motion.div>
+          </Motion.div>
         </div>
       </Container>
     </AnimatedSection>
@@ -69,3 +69,4 @@ function AboutSection({ profile }) {
 }
 
 export default AboutSection
+

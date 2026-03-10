@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import AnimatedSection from '../components/AnimatedSection'
 import Container from '../components/Container'
 import SectionHeading from '../components/SectionHeading'
@@ -15,7 +15,7 @@ function ExperienceSection({ experience }) {
         />
 
         <div className="relative">
-          <motion.div
+          <Motion.div
             className="absolute left-3 top-2 hidden h-[calc(100%-18px)] w-[2px] origin-top bg-[linear-gradient(180deg,#06b6d4,#818cf8,transparent)] md:block"
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1 }}
@@ -23,7 +23,7 @@ function ExperienceSection({ experience }) {
             transition={{ duration: 1.1, ease: easeOut }}
           />
 
-          <motion.div
+          <Motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="show"
@@ -31,7 +31,7 @@ function ExperienceSection({ experience }) {
             className="space-y-6"
           >
             {experience.map((item, index) => (
-              <motion.article
+              <Motion.article
                 key={`${item.company}-${item.role}`}
                 custom={index}
                 variants={timelineReveal}
@@ -48,9 +48,9 @@ function ExperienceSection({ experience }) {
                   </p>
                 </div>
                 <p className="text-sm leading-relaxed text-slate-600">{item.description}</p>
-              </motion.article>
+              </Motion.article>
             ))}
-          </motion.div>
+          </Motion.div>
         </div>
       </Container>
     </AnimatedSection>
@@ -58,3 +58,4 @@ function ExperienceSection({ experience }) {
 }
 
 export default ExperienceSection
+

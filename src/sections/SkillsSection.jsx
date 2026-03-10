@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import {
   Atom,
   Code2,
@@ -35,7 +35,7 @@ function SkillsSection({ skills }) {
           description="Gradient skill cards with hover glow effects, iconography, and staggered reveal transitions."
         />
 
-        <motion.div
+        <Motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
@@ -46,7 +46,7 @@ function SkillsSection({ skills }) {
             const Icon = iconMap[skill.icon] ?? Code2
 
             return (
-              <motion.article
+              <Motion.article
                 key={skill.name}
                 variants={fadeUp}
                 whileHover={{ y: -6, scale: 1.02 }}
@@ -57,13 +57,14 @@ function SkillsSection({ skills }) {
                   <Icon size={20} />
                 </span>
                 <h3 className="mt-4 text-base font-semibold text-slate-900">{skill.name}</h3>
-              </motion.article>
+              </Motion.article>
             )
           })}
-        </motion.div>
+        </Motion.div>
       </Container>
     </AnimatedSection>
   )
 }
 
 export default SkillsSection
+

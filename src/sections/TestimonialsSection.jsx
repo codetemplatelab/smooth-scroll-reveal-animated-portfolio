@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import AnimatedSection from '../components/AnimatedSection'
 import Container from '../components/Container'
 import SectionHeading from '../components/SectionHeading'
@@ -20,7 +20,7 @@ function TestimonialsSection({ testimonials }) {
         />
 
         <div className="overflow-hidden rounded-3xl border border-cyan-100/80 bg-white/75 p-4 shadow-[0_10px_40px_-28px_rgba(14,165,233,0.45)]">
-          <motion.div
+          <Motion.div
             className="flex w-max gap-4"
             animate={{ x: ['0%', '-50%'] }}
             transition={{ duration: 28, ease: 'linear', repeat: Infinity }}
@@ -46,7 +46,7 @@ function TestimonialsSection({ testimonials }) {
                 <p className="text-sm leading-relaxed text-slate-600">"{item.feedback}"</p>
               </article>
             ))}
-          </motion.div>
+          </Motion.div>
         </div>
       </Container>
     </AnimatedSection>
@@ -54,3 +54,4 @@ function TestimonialsSection({ testimonials }) {
 }
 
 export default TestimonialsSection
+

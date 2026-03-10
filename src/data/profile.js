@@ -1,37 +1,68 @@
-﻿export const profile = {
-  brand: 'DevGradient',
+export const profile = {
+  brand: 'DevMotion',
   name: 'Aarav Mehta',
-  title: 'Frontend Developer / Full Stack Developer',
-  tagline: 'Designing clean interfaces with motion, performance, and developer-first architecture.',
+  title: 'Frontend Developer',
   intro:
-    'I build scalable products that combine minimal UI, smooth interaction patterns, and maintainable frontend systems.',
-  availability: 'Open to remote and contract opportunities',
+    'I craft modern web interfaces with clean architecture, smooth interactions, and a strong focus on accessibility and performance.',
+  availability: 'Available for freelance and remote roles',
   location: 'Bengaluru, India',
+  experienceYears: '5+ years building production UIs',
   email: 'hello@aaravmehta.dev',
-  github: 'https://github.com/example',
-  linkedin: 'https://www.linkedin.com/in/example',
-  heroImage: 'https://picsum.photos/seed/gradient-hero-dev/900/1100',
-  aboutImage: 'https://picsum.photos/seed/gradient-about-dev/1000/900',
-  biography: [
-    'I am a developer focused on frontend architecture, reusable systems, and accessible interfaces. I enjoy translating product complexity into intuitive workflows.',
-    'Most of my recent work has been building SaaS dashboards and platform experiences where motion improves hierarchy, feedback, and perceived performance.',
+  profileImage: 'https://picsum.photos/seed/dev-home-portrait/900/1100',
+  aboutImage: 'https://picsum.photos/seed/dev-about-workspace/1100/900',
+  about: [
+    'I am a developer who enjoys building minimal interfaces where animation improves clarity instead of adding noise.',
+    'My core work is in React-based product development, design system implementation, and component architecture for fast-moving teams.',
+    'Across SaaS, analytics, and platform products, I collaborate closely with design and backend teams to ship polished user experiences.',
   ],
-  technologyFocus:
-    'React ecosystem, TypeScript-driven UI engineering, API integration, design systems, and performance optimization.',
-  careerSummary:
-    'Over the last 5 years, I have shipped interfaces for startups and product teams across analytics, commerce, and developer tooling.',
+  contactBlurb:
+    'Working on a portfolio, SaaS product, or frontend redesign? Share your scope and timeline, and I will respond within 24 hours.',
   heroStats: [
     { value: '35+', label: 'Projects Delivered' },
-    { value: '5 Years', label: 'Experience' },
-    { value: '18', label: 'Clients & Teams' },
+    { value: '5+', label: 'Years Experience' },
+    { value: '18', label: 'Client Teams' },
   ],
-  techStack: [
-    { name: 'React', icon: 'Atom' },
-    { name: 'Next.js', icon: 'Layers3' },
-    { name: 'Node.js', icon: 'Server' },
-    { name: 'Docker', icon: 'Boxes' },
-    { name: 'AWS', icon: 'Cloud' },
-    { name: 'Git', icon: 'GitBranch' },
+  socialLinks: [
+    {
+      label: 'GitHub',
+      icon: 'github',
+      url: 'https://github.com/example',
+    },
+    {
+      label: 'LinkedIn',
+      icon: 'linkedin',
+      url: 'https://linkedin.com/in/example',
+    },
+    {
+      label: 'Twitter',
+      icon: 'twitter',
+      url: 'https://x.com/example',
+    },
   ],
-  footerText: 'Built for modern product teams with thoughtful motion and clean architecture.',
+  testimonials: [
+    {
+      name: 'Nisha Rao',
+      role: 'Product Manager, OrbitWorks',
+      quote:
+        'Aarav translated complex workflows into elegant interfaces and delivered with excellent product thinking.',
+    },
+    {
+      name: 'Daniel Kim',
+      role: 'Founder, BuildScope',
+      quote:
+        'The frontend now feels premium and fast. The component structure made feature delivery noticeably easier.',
+    },
+    {
+      name: 'Priya Sharma',
+      role: 'Design Lead, NovaFlow',
+      quote:
+        'Design fidelity, responsiveness, and motion quality were consistently strong across every release.',
+    },
+    {
+      name: 'Mark Bennett',
+      role: 'Engineering Manager, FluxLab',
+      quote:
+        'We improved maintainability and launch speed after adopting the frontend patterns Aarav introduced.',
+    },
+  ],
 }

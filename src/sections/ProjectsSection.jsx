@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import { ArrowUpRight, Github, Globe } from 'lucide-react'
 import AnimatedSection from '../components/AnimatedSection'
 import Container from '../components/Container'
@@ -15,7 +15,7 @@ function ProjectsSection({ projects }) {
           description="Interactive project cards with staggered entry, gradient hover borders, and quick external links."
         />
 
-        <motion.div
+        <Motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
@@ -23,7 +23,7 @@ function ProjectsSection({ projects }) {
           className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
         >
           {projects.map((project) => (
-            <motion.article
+            <Motion.article
               key={project.title}
               variants={fadeUp}
               whileHover={{ y: -7, scale: 1.01 }}
@@ -74,12 +74,13 @@ function ProjectsSection({ projects }) {
                   </a>
                 </div>
               </div>
-            </motion.article>
+            </Motion.article>
           ))}
-        </motion.div>
+        </Motion.div>
       </Container>
     </AnimatedSection>
   )
 }
 
 export default ProjectsSection
+
