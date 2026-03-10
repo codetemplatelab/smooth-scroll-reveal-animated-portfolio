@@ -1,56 +1,56 @@
 ﻿export const projects = [
   {
-    title: 'PulseBoard Analytics',
+    image: 'https://picsum.photos/seed/gradient-project-1/600/400',
+    title: 'Pulse Metrics Platform',
     description:
-      'A realtime product analytics dashboard with custom filters, role-based views, and smooth data transitions.',
-    image: 'https://picsum.photos/seed/pulseboard/900/700',
-    techStack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
-    demoLink: 'https://example.com/demo/pulseboard',
-    githubLink: 'https://github.com/example/pulseboard-analytics',
+      'A modular analytics dashboard with realtime insights, custom filters, and role-based data views.',
+    techStack: ['React', 'Tailwind CSS', 'Framer Motion'],
+    demoLink: 'https://example.com/demo/pulse-metrics',
+    githubLink: 'https://github.com/example/pulse-metrics',
   },
   {
-    title: 'DevFlow Kanban',
+    image: 'https://picsum.photos/seed/gradient-project-2/600/400',
+    title: 'DevSprint Board',
     description:
-      'Task planning board with drag interactions, sprint tracking, and lightweight productivity insights.',
-    image: 'https://picsum.photos/seed/devflow/900/700',
-    techStack: ['React', 'TypeScript', 'Tailwind CSS'],
-    demoLink: 'https://example.com/demo/devflow',
-    githubLink: 'https://github.com/example/devflow-kanban',
+      'A sprint planning workspace with drag interactions, velocity tracking, and release planning views.',
+    techStack: ['React', 'TypeScript', 'Node.js'],
+    demoLink: 'https://example.com/demo/devsprint-board',
+    githubLink: 'https://github.com/example/devsprint-board',
   },
   {
-    title: 'Motion UI Kit',
+    image: 'https://picsum.photos/seed/gradient-project-3/600/400',
+    title: 'Commerce Studio',
     description:
-      'An animated component showcase with reusable cards, modals, menus, and interaction documentation.',
-    image: 'https://picsum.photos/seed/motion-ui-kit/900/700',
+      'A storefront experience with customizable sections, conversion-focused UI, and scalable component patterns.',
+    techStack: ['Next.js', 'Tailwind CSS', 'Stripe'],
+    demoLink: 'https://example.com/demo/commerce-studio',
+    githubLink: 'https://github.com/example/commerce-studio',
+  },
+  {
+    image: 'https://picsum.photos/seed/gradient-project-4/600/400',
+    title: 'HireFlow Portal',
+    description:
+      'Candidate lifecycle app with onboarding journeys, approval pipelines, and recruiter collaboration tools.',
+    techStack: ['React', 'GraphQL', 'Apollo'],
+    demoLink: 'https://example.com/demo/hireflow-portal',
+    githubLink: 'https://github.com/example/hireflow-portal',
+  },
+  {
+    image: 'https://picsum.photos/seed/gradient-project-5/600/400',
+    title: 'Motion UI Library',
+    description:
+      'A production-ready animation library featuring reusable transitions, reveals, and interaction primitives.',
     techStack: ['React', 'Framer Motion', 'Storybook'],
-    demoLink: 'https://example.com/demo/motion-ui-kit',
-    githubLink: 'https://github.com/example/motion-ui-kit',
+    demoLink: 'https://example.com/demo/motion-ui-library',
+    githubLink: 'https://github.com/example/motion-ui-library',
   },
   {
-    title: 'CareerHub Platform',
+    image: 'https://picsum.photos/seed/gradient-project-6/600/400',
+    title: 'OpsMonitor Console',
     description:
-      'A multi-step candidate application flow with profile completion, onboarding screens, and progress tracking.',
-    image: 'https://picsum.photos/seed/careerhub/900/700',
-    techStack: ['React', 'Vite', 'REST API'],
-    demoLink: 'https://example.com/demo/careerhub',
-    githubLink: 'https://github.com/example/careerhub-platform',
-  },
-  {
-    title: 'Shopfront Lite',
-    description:
-      'Frontend storefront template with product filtering, sticky cart panel, and conversion-focused UX blocks.',
-    image: 'https://picsum.photos/seed/shopfront-lite/900/700',
-    techStack: ['React', 'Tailwind CSS', 'Context API'],
-    demoLink: 'https://example.com/demo/shopfront-lite',
-    githubLink: 'https://github.com/example/shopfront-lite',
-  },
-  {
-    title: 'Portfolio CMS',
-    description:
-      'A lightweight admin panel to manage personal portfolio content, project metadata, and published sections.',
-    image: 'https://picsum.photos/seed/portfolio-cms/900/700',
-    techStack: ['React', 'Node.js', 'MongoDB'],
-    demoLink: 'https://example.com/demo/portfolio-cms',
-    githubLink: 'https://github.com/example/portfolio-cms',
+      'System monitoring interface with status visualizations, alert timelines, and incident collaboration tools.',
+    techStack: ['React', 'Node.js', 'WebSocket'],
+    demoLink: 'https://example.com/demo/opsmonitor-console',
+    githubLink: 'https://github.com/example/opsmonitor-console',
   },
 ]

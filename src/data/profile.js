@@ -1,67 +1,37 @@
-export const profile = {
-  brand: 'Aarav.dev',
+﻿export const profile = {
+  brand: 'DevGradient',
   name: 'Aarav Mehta',
-  title: 'Frontend Developer',
+  title: 'Frontend Developer / Full Stack Developer',
+  tagline: 'Designing clean interfaces with motion, performance, and developer-first architecture.',
   intro:
-    'I create modern interfaces for SaaS products with a strong focus on performance, accessibility, and interaction design.',
-  availability: 'Available for freelance and full-time',
+    'I build scalable products that combine minimal UI, smooth interaction patterns, and maintainable frontend systems.',
+  availability: 'Open to remote and contract opportunities',
   location: 'Bengaluru, India',
   email: 'hello@aaravmehta.dev',
-  experienceYears: '4+ years building production UIs',
-  contactBlurb:
-    'I collaborate with startups and product teams to design scalable frontend systems and refined user experiences.',
-  profileImage: 'https://picsum.photos/seed/developer-portrait/900/1100',
-  aboutImage: 'https://picsum.photos/seed/developer-workspace/1000/800',
+  github: 'https://github.com/example',
+  linkedin: 'https://www.linkedin.com/in/example',
+  heroImage: 'https://picsum.photos/seed/gradient-hero-dev/900/1100',
+  aboutImage: 'https://picsum.photos/seed/gradient-about-dev/1000/900',
+  biography: [
+    'I am a developer focused on frontend architecture, reusable systems, and accessible interfaces. I enjoy translating product complexity into intuitive workflows.',
+    'Most of my recent work has been building SaaS dashboards and platform experiences where motion improves hierarchy, feedback, and perceived performance.',
+  ],
+  technologyFocus:
+    'React ecosystem, TypeScript-driven UI engineering, API integration, design systems, and performance optimization.',
+  careerSummary:
+    'Over the last 5 years, I have shipped interfaces for startups and product teams across analytics, commerce, and developer tooling.',
   heroStats: [
-    { value: '28+', label: 'Projects Shipped' },
-    { value: '4 Years', label: 'Industry Experience' },
-    { value: '12', label: 'Happy Clients' },
+    { value: '35+', label: 'Projects Delivered' },
+    { value: '5 Years', label: 'Experience' },
+    { value: '18', label: 'Clients & Teams' },
   ],
-  socialLinks: [
-    {
-      label: 'GitHub',
-      icon: 'github',
-      url: 'https://github.com/example',
-    },
-    {
-      label: 'LinkedIn',
-      icon: 'linkedin',
-      url: 'https://www.linkedin.com/in/example',
-    },
-    {
-      label: 'Twitter',
-      icon: 'twitter',
-      url: 'https://x.com/example',
-    },
+  techStack: [
+    { name: 'React', icon: 'Atom' },
+    { name: 'Next.js', icon: 'Layers3' },
+    { name: 'Node.js', icon: 'Server' },
+    { name: 'Docker', icon: 'Boxes' },
+    { name: 'AWS', icon: 'Cloud' },
+    { name: 'Git', icon: 'GitBranch' },
   ],
-  about: [
-    'I am a frontend developer who likes clean architecture, reusable UI systems, and purposeful micro-interactions. Most of my work is in React, design systems, and product-focused web applications.',
-    'My approach balances speed and maintainability: predictable components, clear state flow, and animation that communicates hierarchy and feedback.',
-  ],
-  testimonials: [
-    {
-      name: 'Nisha Rao',
-      role: 'Product Manager, OrbitWorks',
-      quote:
-        'Aarav turned complex workflows into a fast, intuitive interface. The polish and consistency across screens were outstanding.',
-    },
-    {
-      name: 'Daniel Kim',
-      role: 'Founder, BuildScope',
-      quote:
-        'The frontend architecture is now easy to scale. Delivery was quick, and every interaction felt intentionally crafted.',
-    },
-    {
-      name: 'Priya Sharma',
-      role: 'Design Lead, NovaFlow',
-      quote:
-        'Implementation quality was excellent. Design fidelity, accessibility, and animation details were all handled with care.',
-    },
-    {
-      name: 'Mark Bennett',
-      role: 'Engineering Manager, FluxLab',
-      quote:
-        'Aarav improved performance and simplified our component layer. The result was a much smoother development workflow.',
-    },
-  ],
+  footerText: 'Built for modern product teams with thoughtful motion and clean architecture.',
 }
