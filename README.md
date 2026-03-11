@@ -2,6 +2,10 @@
 
 A modern, minimal, developer-focused portfolio template built with React, Vite, Tailwind CSS, Framer Motion, and lucide-react icons.
 
+## Live Demo
+
+- https://smooth-scroll-reveal-animated-portf.vercel.app/
+
 ## Stack
 
 - React 19
