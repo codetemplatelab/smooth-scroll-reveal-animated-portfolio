@@ -8,7 +8,7 @@ export const profile = {
   location: 'Bengaluru, India',
   experienceYears: '5+ years building production UIs',
   email: 'hello@aaravmehta.dev',
-  profileImage: 'https://picsum.photos/seed/dev-home-portrait/900/1100',
+  profileImage: 'https://plus.unsplash.com/premium_photo-1682092105693-1a2566cf2ee1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW5kaWFuJTIwYm95JTIwcHJvZmVzc2lvbmFsfGVufDB8fDB8fHww',
   aboutImage: 'https://picsum.photos/seed/dev-about-workspace/1100/900',
   about: [
     'I am a developer who enjoys building minimal interfaces where animation improves clarity instead of adding noise.',
